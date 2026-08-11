@@ -1,0 +1,20 @@
+
+We're going to intentionally introduce a database connectivity failure.
+
+The scenario:
+
+Backend
+   |
+   | DB_HOST = postgres-wrong ❌
+   |
+   X
+PostgreSQL
+
+Correct configuration:
+
+Backend
+   |
+   | DB_HOST = postgres ✅
+   |
+   ↓
+PostgreSQL Service
