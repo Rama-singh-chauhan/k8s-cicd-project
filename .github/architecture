@@ -1,0 +1,28 @@
+                     GitHub Repository
+                            |
+                         git push
+                            |
+                            v
+                    GitHub Actions
+                   /      |       \
+                  /       |        \
+               Test    Docker     Deploy
+                         Build
+                           |
+                           v
+                    Docker Registry
+                           |
+                           v
+                  Kubernetes / Minikube
+                           |
+              +------------+------------+
+              |                         |
+              v                         v
+      Backend Deployment        PostgreSQL Deployment
+         2 replicas                 1 replica
+              |                         |
+              v                         v
+      Backend Service          PostgreSQL Service
+              |
+              v
+         Flask Application
