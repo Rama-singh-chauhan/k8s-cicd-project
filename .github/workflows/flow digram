@@ -1,0 +1,23 @@
+flow digram :
+                  repo
+                   |
+                git push
+                   ↓
+              GitHub Repo
+                   ↓
+            GitHub Actions
+                   ↓
+          Build + Test + Docker
+                   ↓
+             Docker Registry
+                   ↓
+             Kubernetes Deploy
+                   ↓
+                Minikube
+              /           \
+             ↓             ↓
+        Flask Backend   PostgreSQL
+             |
+             ↓
+        /health = OK
+        /db = connected
